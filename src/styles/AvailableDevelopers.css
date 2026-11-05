@@ -1,0 +1,516 @@
+.home-available-section {
+    padding: 90px 7%;
+    background: #f8faff;
+}
+
+.home-available-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.home-available-heading>span {
+    color: #6558e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.home-available-heading h2 {
+    margin: 14px 0;
+    color: #17213b;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+}
+
+.home-available-heading p {
+    color: #68738a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.home-available-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.home-developer-card {
+    padding: 26px;
+    background: #fff;
+    border: 1px solid #e9edf5;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(30, 45, 80, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-developer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(30, 45, 80, 0.12);
+}
+
+.home-developer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.home-developer-avatar {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #6558e8, #9a70ed);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.home-developer-status {
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #f0edff;
+    color: #6558e8;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.home-developer-card h3 {
+    margin: 0 0 7px;
+    color: #17213b;
+    font-size: 19px;
+}
+
+.home-developer-role {
+    margin: 0 0 20px;
+    color: #7b8498;
+    font-size: 14px;
+}
+
+.home-developer-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 35px;
+}
+
+.home-developer-skills span {
+    padding: 7px 11px;
+    border-radius: 8px;
+    background: #f4f5fa;
+    color: #4d5870;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.home-developer-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 17px;
+    border-top: 1px solid #edf0f5;
+    color: #7b8498;
+    font-size: 13px;
+}
+
+.home-developer-footer strong {
+    color: #17213b;
+}
+
+@media (max-width: 900px) {
+    .home-available-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .home-available-section {
+        padding: 65px 6%;
+    }
+
+    .home-available-grid {
+        grid-template-columns: 1fr;
+    }
+}.home-available-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 90px 7%;
+    margin: 0;
+    background: #f8faff;
+    display: block;
+}
+.home-available-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    box-sizing: border-box;
+}
+/* Minimal Stats Cards */
+.home-stats-grid {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.home-stat-card {
+    padding: 16px 12px;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.home-stat-card h3 {
+    font-size: 25px;
+    margin: 5px 0;
+    color: #2563eb;
+}
+
+.home-stat-card p {
+    font-size: 13px;
+    margin: 0;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    .home-stats-grid {
+        gap: 8px;
+    }
+
+    .home-stat-card {
+        padding: 12px 5px;
+    }
+
+    .home-stat-card h3 {
+        font-size: 21px;
+    }
+
+    .home-stat-card p {
+        font-size: 11px;
+    }
+}/* ===== AVAILABLE DEVELOPERS DARK MODE ===== */
+
+[data-theme="dark"] .home-available-section {
+    background: #111426;
+}
+
+[data-theme="dark"] .home-available-heading h2,
+[data-theme="dark"] .home-developer-card h3,
+[data-theme="dark"] .home-developer-footer strong {
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .home-available-heading p {
+    color: #a5acc2;
+}
+
+[data-theme="dark"] .home-developer-card {
+    background: #1b2038;
+    border-color: #383e5c;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .home-developer-role,
+[data-theme="dark"] .home-developer-footer {
+    color: #a5acc2;
+}
+
+[data-theme="dark"] .home-developer-status {
+    background: #30365c;
+    color: #aab5ff;
+}
+
+[data-theme="dark"] .home-developer-skills span {
+    background: #252d4b;
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .home-developer-footer {
+    border-top-color: #383e5c;
+}
+
+[data-theme="dark"] .home-stat-card {
+    background: #1b2038;
+    border-color: #383e5c;
+}
+
+[data-theme="dark"] .home-stat-card p {
+    color: #a5acc2;
+}
+/* ===== FIX DARK MODE TEXT VISIBILITY ===== */
+
+[data-theme="dark"] .home-available-heading>span {
+    color: #a99aff;
+}
+
+[data-theme="dark"] .home-available-heading h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .home-available-heading p {
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .home-developer-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .home-developer-role {
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .home-developer-skills span {
+    color: #e0e5ff;
+}
+
+[data-theme="dark"] .home-developer-footer {
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .home-developer-footer strong {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .home-stat-card h3 {
+    color: #8fa0ff;
+}
+
+[data-theme="dark"] .home-stat-card p {
+    color: #c4cbea;
+}/* ===== AVAILABLE DEVELOPERS CARD ANIMATIONS ===== */
+
+/* Cards smoothly appear */
+.home-developer-card {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: developerCardEnter 0.65s ease forwards;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Staggered entry animation */
+.home-developer-card:nth-child(9n + 1) {
+    animation-delay: 0.05s;
+}
+
+.home-developer-card:nth-child(9n + 2) {
+    animation-delay: 0.10s;
+}
+
+.home-developer-card:nth-child(9n + 3) {
+    animation-delay: 0.15s;
+}
+
+.home-developer-card:nth-child(9n + 4) {
+    animation-delay: 0.20s;
+}
+
+.home-developer-card:nth-child(9n + 5) {
+    animation-delay: 0.25s;
+}
+
+.home-developer-card:nth-child(9n + 6) {
+    animation-delay: 0.30s;
+}
+
+.home-developer-card:nth-child(9n + 7) {
+    animation-delay: 0.35s;
+}
+
+.home-developer-card:nth-child(9n + 8) {
+    animation-delay: 0.40s;
+}
+
+.home-developer-card:nth-child(9n) {
+    animation-delay: 0.45s;
+}
+
+@keyframes developerCardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card hover lift and glow */
+.home-developer-card:hover {
+    transform: translateY(-10px) scale(1.015);
+    border-color: #a99aff;
+    box-shadow: 0 20px 45px rgba(101, 88, 232, 0.16);
+}
+
+/* Avatar hover animation */
+.home-developer-avatar {
+    transition: transform 0.35s ease, border-radius 0.35s ease;
+}
+
+.home-developer-card:hover .home-developer-avatar {
+    transform: scale(1.10) rotate(-5deg);
+    border-radius: 50%;
+}
+
+/* Verified status animation */
+.home-developer-status {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.home-developer-card:hover .home-developer-status {
+    background: #e4deff;
+    transform: scale(1.05);
+}
+
+/* Skill badge hover */
+.home-developer-skills span {
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.home-developer-skills span:hover {
+    transform: translateY(-3px);
+    background: #e8e4ff;
+}
+
+/* Footer section hover */
+.home-developer-footer strong {
+    transition: color 0.3s ease;
+}
+
+.home-developer-card:hover .home-developer-footer strong {
+    color: #6558e8;
+}
+
+/* Dark mode card glow */
+[data-theme="dark"] .home-developer-card:hover {
+    border-color: #8274ed;
+    box-shadow: 0 20px 45px rgba(101, 88, 232, 0.22);
+}
+
+[data-theme="dark"] .home-developer-card:hover .home-developer-status {
+    background: #45406e;
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .home-developer-card {
+        animation: none;
+        opacity: 1;
+        transition: none;
+    }
+
+    .home-developer-card:hover,
+    .home-developer-card:hover .home-developer-avatar,
+    .home-developer-skills span:hover {
+        transform: none;
+    }
+}
+/* Developer card entry animation */
+.home-developer-card {
+    opacity: 0;
+    animation: cardFadeIn 0.7s ease-out forwards;
+}
+
+.home-developer-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.home-developer-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.home-developer-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Stats cards animation */
+.home-stat-card {
+    opacity: 0;
+    animation: statsAppear 0.7s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-stat-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.home-stat-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.home-stat-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.home-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(100, 120, 255, 0.2);
+}
+
+@keyframes statsAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading animation */
+.home-available-heading {
+    animation: headingAppear 0.9s ease both;
+    animation-delay: 0.4s;
+}
+
+@keyframes headingAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stats number highlight */
+.home-stat-card h3 {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-stat-card:hover h3 {
+    transform: scale(1.12);
+    color: #8b9cff;
+}

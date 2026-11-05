@@ -1,0 +1,555 @@
+.team-packages-section {
+    width: 100%;
+    padding: 80px 7%;
+    background: #f8faff;
+}
+
+.team-packages-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.team-packages-heading span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.team-packages-heading h2 {
+    color: #172554;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.team-packages-heading p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.team-packages-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+}
+
+.team-package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    padding: 28px 24px;
+    min-height: 430px;
+    transition: 0.3s ease;
+}
+
+.team-package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(37, 99, 235, 0.09);
+}
+
+.team-package-card.popular {
+    border: 2px solid #2563eb;
+}
+
+.team-package-badge {
+    align-self: flex-start;
+    background: #e8eeff;
+    color: #2563eb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.team-package-card h3 {
+    color: #172554;
+    font-size: 20px;
+    margin: 8px 0 12px;
+}
+
+.team-package-price {
+    color: #172554;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.team-package-price span {
+    font-size: 22px;
+    vertical-align: top;
+    margin-right: 3px;
+}
+
+.team-package-month {
+    color: #64748b;
+    font-size: 13px;
+    margin: 2px 0 18px;
+}
+
+.team-package-members {
+    color: #2563eb;
+    background: #f1f5ff;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.team-package-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    flex: 1;
+}
+
+.team-package-card li {
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.team-package-card li::before {
+    content: "✓";
+    color: #2563eb;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+.team-package-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background: #2563eb;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.team-package-button:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+    .team-packages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .team-packages-section {
+        padding: 60px 5%;
+    }
+
+    .team-packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-packages-heading h2 {
+        font-size: 26px;
+    }
+
+    .team-package-card {
+        min-height: 410px;
+    }
+}
+/* ===== TEAM PACKAGES DARK MODE ===== */
+
+[data-theme="dark"] .team-packages-section {
+    background: #111426;
+}
+
+[data-theme="dark"] .team-packages-heading h2,
+[data-theme="dark"] .team-package-card h3,
+[data-theme="dark"] .team-package-price {
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .team-packages-heading p,
+[data-theme="dark"] .team-package-month {
+    color: #a5acc2;
+}
+
+[data-theme="dark"] .team-package-card {
+    background: #1b2038;
+    border-color: #383e5c;
+}
+
+[data-theme="dark"] .team-package-card.popular {
+    border-color: #7182ff;
+}
+
+[data-theme="dark"] .team-package-members {
+    background: #252d4b;
+    color: #aab5ff;
+}
+
+[data-theme="dark"] .team-package-card li {
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .team-package-badge {
+    background: #30365c;
+    color: #aab5ff;
+}
+
+[data-theme="dark"] .team-package-button {
+    background: linear-gradient(110deg, #465bed, #7952e9);
+}
+
+[data-theme="dark"] .team-package-button:hover {
+    background: linear-gradient(110deg, #354bd8, #6840d5);
+}
+/* ===== TEAM PACKAGES ADVANCED ANIMATIONS ===== */
+
+/* Card entrance animation */
+@keyframes packageCardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.team-package-card {
+    animation: packageCardEnter 0.8s ease both;
+    will-change: transform;
+}
+
+.team-package-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.team-package-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.team-package-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Premium hover effect */
+.team-package-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.16);
+    border-color: #638cff;
+}
+
+/* Popular card animated glow */
+.team-package-card.popular {
+    animation:
+        packageCardEnter 0.8s ease 0.25s both,
+        popularGlow 3s ease-in-out 1.1s infinite;
+}
+
+@keyframes popularGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 8px rgba(37, 99, 235, 0.12);
+    }
+
+    50% {
+        box-shadow: 0 0 24px rgba(37, 99, 235, 0.3);
+    }
+}
+
+/* Package heading animation */
+.team-packages-heading {
+    animation: packageHeading 0.8s ease both;
+}
+
+@keyframes packageHeading {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feature hover animation */
+.team-package-card li {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.team-package-card li:hover {
+    transform: translateX(7px);
+    color: #2563eb;
+}
+
+/* Animated check mark */
+.team-package-card li::before {
+    transition: transform 0.3s ease;
+}
+
+.team-package-card li:hover::before {
+    transform: scale(1.3);
+}
+
+/* Price hover animation */
+.team-package-price {
+    transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.team-package-card:hover .team-package-price {
+    transform: scale(1.06);
+}
+
+/* Button shine effect */
+.team-package-button {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-package-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(110deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.team-package-button:hover::before {
+    left: 150%;
+}
+
+.team-package-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* Dark mode glow */
+[data-theme="dark"] .team-package-card:hover {
+    box-shadow: 0 18px 40px rgba(105, 119, 255, 0.2);
+    border-color: #7182ff;
+}
+
+[data-theme="dark"] .team-package-card li:hover {
+    color: #aab5ff;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .team-package-card,
+    .team-packages-heading {
+        animation: none !important;
+    }
+
+    .team-package-card,
+    .team-package-card li,
+    .team-package-price,
+    .team-package-button {
+        transition: none !important;
+    }
+}
+/* ===== EXTRA PREMIUM PACKAGE ANIMATIONS ===== */
+
+/* Floating popular badge */
+.team-package-card.popular .team-package-badge {
+    animation: badgeFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animated card border */
+.team-package-card {
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.team-package-card::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(120deg,
+            transparent,
+            #60a5fa,
+            #8b5cf6,
+            transparent);
+    background-size: 250% 250%;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.team-package-card:hover::after {
+    opacity: 1;
+    animation: borderFlow 3s linear infinite;
+}
+
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 250% 50%;
+    }
+}
+
+/* Soft background glow */
+.team-package-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(96, 165, 250, 0.18),
+            transparent 70%);
+    top: -90px;
+    right: -90px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+.team-package-card:hover::before {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* Price shine */
+.team-package-price {
+    background: linear-gradient(90deg,
+            #172554,
+            #2563eb,
+            #172554);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-position 0.6s ease;
+}
+
+.team-package-card:hover .team-package-price {
+    background-position: right center;
+}
+
+/* Dark mode price */
+[data-theme="dark"] .team-package-price {
+    background-image: linear-gradient(90deg,
+            #ffffff,
+            #aab5ff,
+            #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Dark mode border */
+[data-theme="dark"] .team-package-card:hover::after {
+    background: linear-gradient(120deg,
+            transparent,
+            #7182ff,
+            #a78bfa,
+            transparent);
+    background-size: 250% 250%;
+}
+
+/* Smooth button press */
+.team-package-button:active {
+    transform: scale(0.96);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    .team-package-card.popular .team-package-badge,
+    .team-package-card:hover::after {
+        animation: none !important;
+    }
+}
+/* ===== TEAM PACKAGES TEXT COLOR FIX ===== */
+
+/* Light mode */
+.team-package-card h3,
+.team-package-price {
+    color: #172554 !important;
+    background: none !important;
+    -webkit-text-fill-color: #172554 !important;
+}
+
+.team-package-card li {
+    color: #475569;
+}
+
+.team-package-month {
+    color: #64748b;
+}
+
+.team-packages-heading h2 {
+    color: #172554;
+}
+
+.team-packages-heading p {
+    color: #64748b;
+}
+
+/* Dark mode */
+[data-theme="dark"] .team-package-card h3,
+[data-theme="dark"] .team-package-price,
+[data-theme="dark"] .team-packages-heading h2 {
+    color: #f1f3ff !important;
+    background: none !important;
+    -webkit-text-fill-color: #f1f3ff !important;
+}
+
+[data-theme="dark"] .team-package-card li {
+    color: #d0d5e5;
+}
+
+[data-theme="dark"] .team-package-month,
+[data-theme="dark"] .team-packages-heading p {
+    color: #b8c0d5;
+}
+
+[data-theme="dark"] .team-package-members {
+    color: #c5ceff;
+}
+
+[data-theme="dark"] .team-package-badge {
+    color: #c5ceff;
+}

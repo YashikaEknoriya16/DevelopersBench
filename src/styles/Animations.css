@@ -1,0 +1,158 @@
+/* PREMIUM ANIMATIONS */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Common transitions */
+.button,
+.talent-button,
+.talent-developer-card,
+.talent-stat-card,
+.talent-card,
+.developer-card,
+.service-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+/* Button hover */
+.button:hover,
+.talent-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Developer card hover */
+.developer-card:hover,
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+/* Hero entrance animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero content */
+.hero-content,
+.talent-hero-content {
+    animation: fadeInUp 0.8s ease both;
+}
+
+/* Hero visual */
+.hero-visual,
+.talent-hero-decoration {
+    animation: fadeInUp 1s ease both;
+}
+
+/* Floating animation */
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.talent-floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+.talent-floating-two {
+    animation-delay: 0.5s;
+}
+
+.talent-floating-three {
+    animation-delay: 1s;
+}
+
+/* Premium developer cards */
+.talent-developer-card {
+    transition: all 0.35s ease;
+}
+
+.talent-developer-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* PREMIUM CARD EFFECTS */
+
+/* Developer card glow */
+.talent-developer-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.talent-developer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(75, 80, 180, 0.15);
+}
+
+/* Card top highlight */
+.talent-developer-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            transparent 25%,
+            rgba(255, 255, 255, 0.35) 50%,
+            transparent 75%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.talent-developer-card:hover::after {
+    transform: translateX(120%);
+}
+
+/* Premium button interaction */
+.button,
+.talent-button,
+.submit-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:active,
+.talent-button:active,
+.submit-button:active {
+    transform: scale(0.97);
+}
+
+/* Keyboard accessibility */
+.button:focus-visible,
+.talent-button:focus-visible,
+.talent-developer-card a:focus-visible {
+    outline: 3px solid #8c83e5;
+    outline-offset: 4px;
+}

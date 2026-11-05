@@ -1,0 +1,393 @@
+/* TABLET RESPONSIVE */
+@media (max-width: 950px) {
+    .header {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 5%;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .stats-strip {
+        padding: 25px 4%;
+    }
+
+    .developer-grid,
+    .services-grid,
+    .talent-developer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-section {
+        gap: 35px;
+    }
+
+    .talent-hero {
+        padding: 65px 5%;
+        gap: 25px;
+    }
+
+    .talent-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .available-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact-wrap {
+        gap: 35px;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 680px) {
+    .announcement {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .header {
+        min-height: 68px;
+        padding: 0 18px;
+    }
+
+    .brand-text {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        border-bottom: 1px solid #e9e8f2;
+        background: #ffffff;
+        box-shadow: 0 12px 25px rgba(30, 25, 70, 0.08);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 22px 50px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 48px);
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        gap: 10px;
+    }
+
+    .hero-proof {
+        flex-wrap: wrap;
+    }
+        .hero-art {
+            min-height: 390px;
+            width: 100%;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+    
+        .art-glow {
+            width: 270px;
+            height: 270px;
+        }
+    
+        .code-window {
+            width: min(100%, 425px);
+            transform: rotate(-2deg);
+        }
+                .tag-top {
+                    top: 5px;
+                    right: 0;
+                }
+        
+                .tag-bottom {
+                    bottom: 5px;
+                    left: 0;
+                }
+
+    .code-body {
+        min-height: 180px;
+        padding: 18px;
+        font-size: 11px;
+    }
+
+    .stats-strip {
+        padding: 25px 18px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat-item {
+        padding: 15px 5px;
+        border-right: 0;
+        border-bottom: 1px solid #e9e8f0;
+    }
+
+    .stat-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .stat-item h3 {
+        font-size: 20px;
+    }
+
+    .stat-item p {
+        font-size: 11px;
+    }
+
+    .developers-section,
+    .services-section,
+    .about-section {
+        padding: 65px 22px;
+    }
+
+    .section-heading h2,
+    .about-copy h2 {
+        font-size: 34px;
+    }
+
+    .developer-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .filter-wrap {
+        flex-wrap: wrap;
+    }
+
+    .developer-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .developer-card {
+        padding: 23px;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-visual {
+        min-height: 320px;
+    }
+
+    .about-orbit {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-center {
+        width: 110px;
+        height: 110px;
+    }
+
+    .contact-section {
+        padding: 65px 22px;
+    }
+
+    .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .footer {
+        padding: 45px 22px 20px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    /* TOP DEVELOPERS PAGE */
+    .talent-hero {
+        min-height: auto;
+        padding: 45px 22px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .back-home {
+        margin-bottom: 25px;
+    }
+
+    .talent-hero h1 {
+        font-size: clamp(36px, 10vw, 47px);
+        letter-spacing: -1.5px;
+    }
+
+    .talent-hero-content>p {
+        font-size: 14px;
+    }
+
+    .talent-hero-decoration {
+        min-height: 290px;
+    }
+
+    .talent-orbit-one {
+        width: 260px;
+        height: 260px;
+    }
+
+    .talent-orbit-two {
+        width: 195px;
+        height: 195px;
+    }
+
+    .talent-hero-center {
+        width: 140px;
+        height: 140px;
+    }
+
+    .talent-floating-one {
+        left: 5%;
+    }
+
+    .talent-floating-two {
+        right: 4%;
+    }
+
+    .available-section {
+        padding: 60px 22px;
+    }
+
+    .available-heading h2 {
+        font-size: 34px;
+    }
+
+    .available-heading p {
+        font-size: 14px;
+    }
+
+    .talent-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .talent-stat-card {
+        min-height: 100px;
+    }
+
+    .talent-developers {
+        margin-top: 65px;
+    }
+
+    .talent-developer-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .talent-developer-card {
+        padding: 24px;
+    }
+
+    .talent-bottom-cta {
+        margin-top: 55px;
+        padding: 25px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+    .brand-text {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .stats-strip {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .stat-item h3 {
+        font-size: 18px;
+    }
+
+    .talent-hero h1 {
+        font-size: 34px;
+    }
+
+    .contact-form {
+        padding: 17px;
+    }
+}

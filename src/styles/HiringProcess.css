@@ -1,0 +1,173 @@
+.hiring-process {
+    padding: 80px 24px 90px;
+    background: #fff;
+    transition: background 0.3s ease;
+}
+
+.hiring-process-container {
+    max-width: 1160px;
+    margin: auto;
+}
+
+.hiring-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.hiring-heading>span {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hiring-heading h2 {
+    margin: 12px 0;
+    color: #17213b;
+    font-size: clamp(32px, 4vw, 46px);
+    letter-spacing: -1.5px;
+}
+
+.hiring-heading p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.hiring-heading-line {
+    width: 82px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+}
+
+.hiring-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.hiring-step {
+    position: relative;
+    text-align: center;
+    padding: 12px 8px;
+    animation: hiringFade 0.7s ease both;
+}
+
+.hiring-icon {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hiring-step:hover .hiring-icon {
+    transform: translateY(-7px) scale(1.08);
+    box-shadow: 0 12px 28px rgba(50, 80, 180, 0.15);
+}
+
+.hiring-blue {
+    color: #3269f5;
+    background: #eaf0ff;
+}
+
+.hiring-purple {
+    color: #8955ed;
+    background: #f1eaff;
+}
+
+.hiring-green {
+    color: #19b86a;
+    background: #e2f8ed;
+}
+
+.hiring-orange {
+    color: #e69a35;
+    background: #fff0dc;
+}
+
+.hiring-number {
+    position: absolute;
+    top: 0;
+    right: 17%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(50, 90, 220, 0.2);
+}
+
+.hiring-step h3 {
+    margin: 0 0 9px;
+    color: #17213b;
+    font-size: 18px;
+}
+
+.hiring-step p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+@keyframes hiringFade {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode */
+[data-theme="dark"] .hiring-process {
+    background: #111426;
+}
+
+[data-theme="dark"] .hiring-heading h2,
+[data-theme="dark"] .hiring-step h3 {
+    color: #f1f3ff;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .hiring-steps {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hiring-process {
+        padding: 60px 18px;
+    }
+
+    .hiring-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .hiring-number {
+        right: calc(50% - 62px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hiring-step,
+    .hiring-icon {
+        animation: none;
+        transition: none;
+    }
+}

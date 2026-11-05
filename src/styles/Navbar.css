@@ -1,0 +1,245 @@
+.announcement {
+    min-height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: #f2f4ff;
+    color: #48516d;
+    font-size: 12px;
+}
+
+.announcement-dot {
+    width: 6px;
+    height: 6px;
+    background: #6556ed;
+    border-radius: 50%;
+}
+
+.announcement a {
+    color: #4557d9;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.header {
+    width: min(1240px, calc(100% - 48px));
+    height: 82px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #fff;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #4659ef, #8b51ed);
+    color: white;
+    font: 800 25px 'Manrope', sans-serif;
+    box-shadow: 0 5px 15px #5260e32c;
+}
+
+.brand-mark span {
+    color: #c7b8ff;
+}
+
+.brand-text {
+    font: 800 18px 'Manrope', sans-serif;
+    letter-spacing: -1px;
+}
+
+.brand-text>span {
+    display: block;
+    color: #8b52ed;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    margin-top: -2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    border: 0;
+    background: none;
+    padding: 9px 0;
+    color: #606a80;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #4d55dd;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 19px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    transition: transform .2s, box-shadow .2s, background .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: linear-gradient(110deg, #465bed, #7952e9);
+    color: #fff;
+    box-shadow: 0 7px 18px #5a5be52a;
+}
+
+.button-primary:hover {
+    box-shadow: 0 9px 23px #5a5be54a;
+}
+
+.button-light {
+    border-color: #e5e7f0;
+    background: white;
+    color: #34405d;
+}
+
+.button-outline {
+    border-color: #dfe2ef;
+    background: white;
+    color: #3544b9;
+}
+
+.header-cta {
+    padding: 12px 16px;
+    white-space: nowrap;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: white;
+    font-size: 25px;
+}
+/* Navbar Hover Animation */
+.nav-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background: linear-gradient(90deg, #4258ed, #8655ee);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* Dark / Light Theme Toggle */
+.theme-toggle {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e7f2;
+    border-radius: 14px;
+    background: #f5f4ff;
+    color: #6552e8;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: linear-gradient(135deg, #4258ed, #8655ee);
+    color: white;
+    border-color: transparent;
+    transform: rotate(12deg);
+    box-shadow: 0 6px 18px rgba(66, 88, 237, 0.2);
+}
+
+.theme-toggle:active {
+    transform: scale(0.92);
+}
+/* NAVBAR DARK MODE */
+
+[data-theme="dark"] .announcement {
+    background: #1b2038;
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .header {
+    background: #111426;
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .brand-text {
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .nav-link {
+    color: #b5bdd5;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+    color: #9b8aff;
+}
+
+[data-theme="dark"] .button-light,
+[data-theme="dark"] .button-outline {
+    background: #222842;
+    border-color: #383e5c;
+    color: #f1f3ff;
+}
+
+
+[data-theme="dark"] .menu-toggle {
+    background: #222842;
+    color: #f1f3ff;
+    border: 1px solid #383e5c;
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: #222842;
+    border-color: #383e5c;
+    color: #ffd66b;
+}
+/* ADRS Company Logo */
+.adrs-logo {
+    width: 145px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+/* Logo in Dark Mode */
+[data-theme="dark"] .adrs-logo {
+    filter: brightness(0) invert(1);
+}

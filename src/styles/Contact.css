@@ -1,0 +1,243 @@
+.contact-section {
+    background: linear-gradient(115deg, #202957, #302d6d 58%, #49348c);
+    color: white;
+    padding: 85px 0;
+    position: relative;
+}
+
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr .85fr;
+    align-items: center;
+    gap: 85px;
+}
+
+.light-eyebrow {
+    color: #c1b6ff;
+}
+
+.contact-copy h2 {
+    font-size: clamp(36px, 4vw, 49px);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.contact-copy h2 span {
+    color: #b6a2ff;
+}
+
+.contact-copy>p {
+    color: #d0d3e7;
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 410px;
+    margin: 20px 0 30px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 18px 0;
+}
+
+.contact-detail>span {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #ffffff13;
+    color: #d1c5ff;
+    font-size: 17px;
+}
+
+.contact-detail small,
+.contact-detail a {
+    display: block;
+}
+
+.contact-detail small {
+    color: #b9bfdb;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-detail a {
+    font-size: 12px;
+}
+
+.contact-form {
+    background: white;
+    color: #252f4c;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 20px 60px #14183a2a;
+}
+
+.contact-form h3 {
+    font: 800 20px 'Manrope', sans-serif;
+    margin: 0 0 8px;
+}
+
+.contact-form>p {
+    color: #838a9e;
+    font-size: 11px;
+    margin: 0 0 22px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 14px;
+    color: #4c5570;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 11px 12px;
+    background: #fafbff;
+    border: 1px solid #e8eaf2;
+    border-radius: 7px;
+    outline: 0;
+    color: #36405b;
+    font-size: 11px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #8c83ed;
+    box-shadow: 0 0 0 3px #8c83ed18;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 17px;
+}
+
+.form-privacy {
+    display: block;
+    text-align: center;
+    margin-top: 13px;
+    color: #989eb0;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+.form-success {
+    padding: 10px;
+    background: #e9faf2;
+    color: #16795c !important;
+    border-radius: 7px;
+    line-height: 1.6;
+}
+
+.footer {
+    width: min(1160px, calc(100% - 48px));
+    margin: auto;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 36px 0;
+}
+
+.footer-main>p {
+    color: #7b8498;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-bottom {
+    color: #777f94;
+    font-size: 10px;
+}
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+    color: #5058d4;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #eceef5;
+    padding: 20px 0;
+}
+/* CONTACT FORM DARK MODE */
+
+[data-theme="dark"] .contact-form {
+    background: #1b2038;
+    color: #f1f3ff;
+    border: 1px solid #383e5c;
+}
+
+[data-theme="dark"] .contact-form h3 {
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .contact-form>p {
+    color: #a5acc2;
+}
+
+[data-theme="dark"] .contact-form label {
+    color: #c4cbea;
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form select,
+[data-theme="dark"] .contact-form textarea {
+    background: #222842;
+    border-color: #383e5c;
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder {
+    color: #929bb8;
+}
+
+[data-theme="dark"] .contact-form select option {
+    background: #222842;
+    color: #f1f3ff;
+}
+
+/* FOOTER DARK MODE */
+
+[data-theme="dark"] .footer {
+    background: #111426;
+    color: #f1f3ff;
+}
+
+[data-theme="dark"] .footer-main>p,
+[data-theme="dark"] .footer-links a,
+[data-theme="dark"] .footer-bottom {
+    color: #a5acc2;
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-color: #30344d;
+}
+
+[data-theme="dark"] .footer-links a:hover,
+[data-theme="dark"] .footer-bottom a:hover {
+    color: #a783ff;
+}

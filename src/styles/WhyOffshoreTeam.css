@@ -1,0 +1,221 @@
+.why-offshore {
+    width: 100%;
+    padding: 85px 24px;
+    background: #ffffff;
+}
+
+.why-offshore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-offshore-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.why-offshore-heading>span {
+    color: #3268e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.why-offshore-heading h2 {
+    color: #191d28;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 750;
+    margin: 12px 0 16px;
+}
+
+.why-offshore-line {
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    background: #3268f5;
+    margin: 0 auto 18px;
+}
+
+.why-offshore-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.why-offshore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.why-offshore-item {
+    min-height: 215px;
+    padding: 30px 24px;
+    text-align: center;
+    border: 1px solid #e5e9f1;
+    border-radius: 16px;
+    background: #fff;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.why-offshore-item:hover {
+    border-color: #b8cbff;
+    transform: translateY(-4px);
+}
+
+.why-offshore-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.why-offshore-icon.blue {
+    color: #3268f5;
+    background: #edf3ff;
+}
+
+.why-offshore-icon.purple {
+    color: #8054db;
+    background: #f3efff;
+}
+
+.why-offshore-icon.green {
+    color: #16ae65;
+    background: #eafaf1;
+}
+
+.why-offshore-icon.orange {
+    color: #e99a27;
+    background: #fff6e9;
+}
+
+.why-offshore-icon.indigo {
+    color: #5d63dc;
+    background: #f0f0ff;
+}
+
+.why-offshore-icon.red {
+    color: #e34e55;
+    background: #fff0f0;
+}
+
+.why-offshore-item h3 {
+    color: #191d28;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.why-offshore-item p {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .why-offshore-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .why-offshore {
+        padding: 65px 18px;
+    }
+
+    .why-offshore-heading {
+        margin-bottom: 38px;
+    }
+
+    .why-offshore-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .why-offshore-item {
+        min-height: auto;
+        padding: 27px 20px;
+    }
+}
+#why-offshore {
+    scroll-margin-top: 100px;
+}
+/* LIGHT THEME */
+.why-offshore {
+    background: var(--section-bg, #ffffff);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.why-offshore-item {
+    background: var(--card-bg, #ffffff);
+    border-color: var(--border, #e5e9f1);
+}
+
+.why-offshore-heading h2,
+.why-offshore-item h3 {
+    color: var(--text, #191d28);
+}
+
+.why-offshore-heading p,
+.why-offshore-item p {
+    color: var(--muted, #667085);
+}
+
+/* DARK THEME */
+[data-theme="dark"] .why-offshore {
+    background: #171923;
+}
+
+[data-theme="dark"] .why-offshore-item {
+    background: #202330;
+    border-color: #343849;
+}
+
+[data-theme="dark"] .why-offshore-heading h2,
+[data-theme="dark"] .why-offshore-item h3 {
+    color: #f5f6fa;
+}
+
+[data-theme="dark"] .why-offshore-heading p,
+[data-theme="dark"] .why-offshore-item p {
+    color: #b5bac8;
+}
+
+[data-theme="dark"] .why-offshore-item:hover {
+    border-color: #527fff;
+}
+
+/* Dark theme icon backgrounds */
+[data-theme="dark"] .why-offshore-icon.blue {
+    background: #25365d;
+}
+
+[data-theme="dark"] .why-offshore-icon.purple {
+    background: #352a50;
+}
+
+[data-theme="dark"] .why-offshore-icon.green {
+    background: #1e4035;
+}
+
+[data-theme="dark"] .why-offshore-icon.orange {
+    background: #493722;
+}
+
+[data-theme="dark"] .why-offshore-icon.indigo {
+    background: #303255;
+}
+
+[data-theme="dark"] .why-offshore-icon.red {
+    background: #482b32;
+}
+#why-offshore {
+    scroll-margin-top: 110px;
+}

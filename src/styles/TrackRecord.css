@@ -1,0 +1,88 @@
+.track-record {
+    width: 100%;
+    padding: 90px 24px 85px;
+    background: linear-gradient(135deg, #1d2029, #191b23);
+    color: #fff;
+}
+
+.track-record-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.track-record-heading {
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.track-record-heading h2 {
+    font-size: 44px;
+    font-weight: 750;
+    margin: 0 0 18px;
+    color: #fff;
+}
+
+.track-record-heading span {
+    display: block;
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    background: #3978ff;
+    margin: 0 auto;
+}
+
+.track-record-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.track-record-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.track-record-icon {
+    color: #4b83ff;
+    fill: #4b83ff;
+    margin-bottom: 14px;
+}
+
+.track-record-item h3 {
+    color: #fff;
+    font-size: 76px;
+    line-height: 1.1;
+    font-weight: 750;
+    margin: 0 0 14px;
+}
+
+.track-record-item p {
+    color: #d4d5dc;
+    font-size: 22px;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .track-record {
+        padding: 65px 20px;
+    }
+
+    .track-record-heading h2 {
+        font-size: 32px;
+    }
+
+    .track-record-stats {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .track-record-item h3 {
+        font-size: 58px;
+    }
+
+    .track-record-item p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,146 @@
+@import "./styles/Global.css";
+@import "./styles/Navbar.css";
+@import "./styles/Home.css";
+@import "./styles/Contact.css";
+@import "./styles/TopDevelopers.css";
+@import "./styles/Responsive.css";
+@import "./styles/Animations.css";
+@import "./styles/AvailableDevelopers.css";
+@import "./styles/ClientFeedback.css";
+@import "./styles/TeamPackages.css";
+@import "./styles/SetupProcess.css";
+.adrs-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+/* ===== FULL WEBSITE FLOATING BUBBLES EFFECT ===== */
+
+body {
+    position: relative;
+}
+
+/* Bubble animation layer */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+
+/* Small floating bubbles */
+body::before {
+    opacity: 0.35;
+    background-image:
+        radial-gradient(circle, #60a5fa 5px, transparent 6px),
+        radial-gradient(circle, #818cf8 8px, transparent 9px),
+        radial-gradient(circle, #38bdf8 4px, transparent 5px),
+        radial-gradient(circle, #a78bfa 6px, transparent 7px),
+        radial-gradient(circle, #60a5fa 9px, transparent 10px),
+        radial-gradient(circle, #38bdf8 5px, transparent 6px);
+
+    background-size:
+        100px 100px,
+        140px 140px,
+        110px 110px,
+        160px 160px,
+        180px 180px,
+        130px 130px;
+
+    background-position:
+        10% 100%,
+        30% 80%,
+        50% 100%,
+        70% 90%,
+        90% 100%,
+        40% 70%;
+
+    animation: bubblesFloat 18s linear infinite;
+}
+
+/* Large soft bubbles */
+body::after {
+    opacity: 0.18;
+    background-image:
+        radial-gradient(circle, #93c5fd 18px, transparent 20px),
+        radial-gradient(circle, #a5b4fc 13px, transparent 15px),
+        radial-gradient(circle, #7dd3fc 22px, transparent 24px),
+        radial-gradient(circle, #c4b5fd 16px, transparent 18px);
+
+    background-size:
+        220px 220px,
+        180px 180px,
+        260px 260px,
+        200px 200px;
+
+    background-position:
+        20% 100%,
+        60% 90%,
+        85% 100%,
+        45% 80%;
+
+    animation: bubblesFloat 25s linear infinite reverse;
+}
+
+@keyframes bubblesFloat {
+    0% {
+        background-position:
+            10% 110%,
+            30% 100%,
+            50% 110%,
+            70% 100%,
+            90% 110%,
+            40% 100%;
+    }
+
+    50% {
+        background-position:
+            15% 50%,
+            25% 40%,
+            55% 60%,
+            65% 45%,
+            85% 55%,
+            45% 35%;
+    }
+
+    100% {
+        background-position:
+            10% -20%,
+            30% -10%,
+            50% -20%,
+            70% -10%,
+            90% -20%,
+            40% -10%;
+    }
+}
+
+/* Dark mode bubbles */
+[data-theme="dark"] body::before {
+    opacity: 0.25;
+}
+
+[data-theme="dark"] body::after {
+    opacity: 0.14;
+}
+
+/* Mobile performance */
+@media (max-width: 600px) {
+
+    body::before,
+    body::after {
+        opacity: 0.15;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    body::before,
+    body::after {
+        animation: none;
+    }
+}
